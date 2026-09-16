@@ -1,3 +1,7 @@
+🔗 **Live Demo (Before - static site):** [Flowdesk](https://nicolemarise.github.io/Production-Grade-AWS-Infrastructure-Cost-Optimized-and-Fault-Tolerant-Public/FLowDesk/)
+
+🔗 **Live Demo (After - AWS infra):** _coming soon_
+
 ## The Business Challenge
 
 The business required a **highly available and highly scalable application** capable of handling traffic spikes without downtime, while avoiding the unnecessary costs associated with idle servers.
@@ -14,3 +18,7 @@ The project is divided into two parts:
 
 - **Part A:** Design and deployment of the AWS infrastructure.
 - **Part B:** Automation of the infrastructure using Terraform Infrastructure as Code (IaC).
+
+## Architecture Diagram
+
+_(diagram coming once infra is built)_
