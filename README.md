@@ -1,6 +1,7 @@
 🔗 **Live Demo (Before - static site):** [Flowdesk](https://nicolemarise.github.io/Production-Grade-AWS-Infrastructure-Cost-Optimized-and-Fault-Tolerant-Public/FLowDesk/)
 
-🔗 **Live Demo (After - AWS infra):** _coming soon_
+🔗 **Live Demo (After - AWS infra):** http://flowdesk-alb-2026873328.us-east-1.elb.amazonaws.com
+
 
 ## The Business Challenge
 
@@ -25,4 +26,15 @@ _(diagram coming once infra is built)_
 
 <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/6cec1a13-bf4e-47e0-9e6a-f2c5d4c1340a" />
 <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/b131bc29-6e6f-4d74-9dc4-3070b4a1807c" />
+<img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/aa67438a-26b1-423c-acda-f8973661c9c7" />
+<img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/61eba25d-0895-4efe-88c1-28552730c7c8" />
+<img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/662f5abb-1dd4-4331-9e57-067973c5f259" />
+<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/6114dee7-feb0-4371-aebb-6cad1e0ab1a6" />
+<img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/7cebcbda-33c2-4ec4-a5b7-76f5dc25e3c9" />
+
+
+
+
+
+
 
