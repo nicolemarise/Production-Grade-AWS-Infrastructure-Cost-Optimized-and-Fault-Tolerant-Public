@@ -22,3 +22,7 @@ The project is divided into two parts:
 ## Architecture Diagram
 
 _(diagram coming once infra is built)_
+
+<img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/6cec1a13-bf4e-47e0-9e6a-f2c5d4c1340a" />
+<img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/b131bc29-6e6f-4d74-9dc4-3070b4a1807c" />
+
