@@ -2,7 +2,7 @@
 
 🔗 **Live Demo (Before – static site):** [Flowdesk](https://nicolemarise.github.io/Production-Grade-AWS-Infrastructure-Cost-Optimized-and-Fault-Tolerant-Public/FLowDesk/)
 
-🔗 **Live Demo (After – AWS infra):** Deployed on-demand via Terraform to control cost — see full evidence below. Run `terraform apply` in the `terraform/` folder to bring it up live in ~15 minutes.
+🔗 **Live Demo (After – AWS infra):** Deployed on-demand via Terraform to control cost — see full evidence below. Run `terraform apply` in the `terraform/` folder to bring it up live in 15 minutes.
 
 ## The Business Challenge
 
@@ -19,7 +19,7 @@ I implemented a **Multi-AZ VPC** with public and private subnets, an **Applicati
 The project is divided into two parts:
 
 - **Part A:** Manual design and deployment of the AWS infrastructure through the AWS Console, to build a deep understanding of every component before automating it.
-- **Part B:** Automation of the identical infrastructure using Terraform (Infrastructure as Code), so it can be reproducibly created and destroyed on demand.
+- **Part B:** Automation of the identical infrastructure using Terraform (Infrastructure as Code), so it can be repeatedly created and destroyed on demand.
 
 ## Architecture Diagram
 
