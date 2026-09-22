@@ -1,4 +1,4 @@
-# Production-Grade AWS Infrastructure — Cost-Optimized and Fault-Tolerant
+<img width="1363" height="726" alt="image" src="https://github.com/user-attachments/assets/30e70016-e986-4abb-bf0f-99b4970b0b17" /># Production-Grade AWS Infrastructure — Cost-Optimized and Fault-Tolerant
 
 🔗 **Live Demo (Before – static site):** [Flowdesk](https://nicolemarise.github.io/Production-Grade-AWS-Infrastructure-Cost-Optimized-and-Fault-Tolerant-Public/FLowDesk/)
 
@@ -75,14 +75,32 @@ VPC resource map
 
 ALB creation success
 <img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/aa67438a-26b1-423c-acda-f8973661c9c7" />
+
+Auto Scaling Group (Part A, manual build) — 2/2 healthy, Min 2 / Desired 2 / Max 4 across both AZs
 <img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/61eba25d-0895-4efe-88c1-28552730c7c8" />
+
+Target group showing both EC2 instances registered and healthy
 <img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/662f5abb-1dd4-4331-9e57-067973c5f259" />
+
+RDS database successfully created — MySQL, Multi-AZ, db.t3.micro
 <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/6114dee7-feb0-4371-aebb-6cad1e0ab1a6" />
+
+RDS configuration confirming Multi-AZ: Yes
 <img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/7cebcbda-33c2-4ec4-a5b7-76f5dc25e3c9" />
+
+CloudWatch dashboard covering EC2, ALB, and RDS metrics
 <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/40b6f708-4de2-403a-9756-008f3645d482" />
+
+CloudWatch high-CPU alarm successfully created
 <img width="1919" height="989" alt="image" src="https://github.com/user-attachments/assets/36026bdd-4fdc-4ab4-8f4b-89292d051ada" />
+
+High-CPU alarm detail view, showing the CPUUtilization graph and threshold
 <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/b597ec19-ba11-4f22-a367-7ba97583db7d" />
+
+terraform apply — 8 resources added, 0 changed, 0 destroyed
 <img width="1364" height="767" alt="image" src="https://github.com/user-attachments/assets/a38b71a0-454d-4986-a1dc-3f288ee81337" />
+
+Evidence that terraform code worked: 
 <img width="1363" height="767" alt="image" src="https://github.com/user-attachments/assets/7264e9a5-7488-4dba-b0e4-2eb58e2ea244" />
 <img width="1363" height="682" alt="image" src="https://github.com/user-attachments/assets/ce631d9c-b8e7-44ff-aaec-61a358775438" />
 <img width="1365" height="685" alt="image" src="https://github.com/user-attachments/assets/806793f9-c50b-4713-b7c3-e5b99d773d53" />
