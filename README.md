@@ -23,7 +23,7 @@ The project is divided into two parts:
 
 ## Architecture Diagram
 
-![Flowdesk AWS architecture diagram](docs/architecture-diagram.png)
+(![Flowdesk AWS architecture diagram](docs/architecture-diagram.png)
 
 ## Evidence
 
