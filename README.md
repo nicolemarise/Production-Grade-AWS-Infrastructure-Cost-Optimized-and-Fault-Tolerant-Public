@@ -68,10 +68,9 @@ Evidence that terraform code worked:
 
 ## Key decisions and trade-offs
 
-- **S3 Gateway endpoint instead of a NAT Gateway.** Private-subnet EC2 instances only needed to reach Amazon Linux's S3-backed package repos and the app's own S3 bucket — both reachable for free through an S3 Gateway endpoint. This avoided ~$65+/month in NAT Gateway costs with no functional downside.
-- **Multi-AZ RDS.** Chosen over single-AZ despite roughly doubling database cost, since high availability was an explicit requirement — a standby replica in a second AZ means the database survives an AZ outage.
-- **Destroy-and-redeploy workflow instead of running 24/7.** Since this is a portfolio project rather than a live product, infrastructure is built, verified, and torn down between sessions. `terraform apply` recreates the entire stack in ~15 minutes; `terraform destroy` removes it cleanly. This is itself a demonstration of what Infrastructure as Code is for.
-- **Manual build first, then automated.** Part A was built by hand through the console specifically to understand each AWS service before writing Terraform for it — the code in Part B is a direct translation of that manual build, not a template copied from elsewhere.
+- **S3 Gateway endpoint instead of a NAT Gateway.** Private-subnet EC2 instances only needed to reach Amazon Linux's S3-backed package repos and the app's own S3 bucket — both reachable for free through an S3 Gateway endpoint. This avoided +/- $65 month in NAT Gateway costs with no functional downside.
+- **Multi-AZ RDS.** Chosen over single-AZ despite roughly doubling database cost, since high availability was an explicit requirement — a standby replica in a second AZ means the database survives an AZ outage reducing possible downtime.
+- **Destroy-and-redeploy workflow instead of running 24/7.** Since this is a portfolio project rather than a live product, infrastructure is built, verified, and torn down between sessions. `terraform apply` recreates the entire stack in 15 minutes; `terraform destroy` removes it cleanly. This is itself a demonstration of what Infrastructure as Code is for.
 - **Broad IAM permissions for now.** The Terraform deployer IAM user uses `AdministratorAccess` for simplicity in a personal project. In a team/production setting, this would be scoped to only the specific services this code touches.
 
 ## Challenges faced
@@ -83,14 +82,14 @@ Evidence that terraform code worked:
 
 ## Lessons learned
 
-- Building the same infrastructure twice — once by hand, once as code — made the Terraform code far easier to write and debug, since every resource and its purpose was already understood.
+- Building the same infrastructure twice — once by hand, once as code — made the Terraform code slightly easier to write and debug, since every resource and its purpose was already understood.
 - Small cost-conscious decisions (S3 endpoint over NAT Gateway, destroy-between-sessions) add up to real savings without sacrificing the "production-grade" architecture story.
 - Infrastructure as Code's real value showed up practically: recreating a Multi-AZ, load-balanced, auto-scaling stack from scratch took about 15 minutes with `terraform apply`, versus roughly 3-4 hours doing it manually through the console.
 
 ## Findings after working with Terraform
 
 - **Environment variables beat a credentials file saved via Notepad.** I initially set up AWS credentials in `~/.aws/credentials` using Notepad, but kept hitting "No valid credential sources found" errors that turned out to be caused by Notepad silently saving the file with a `.txt` extension. Setting `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as PowerShell environment variables instead was more reliable — no file, no encoding surprises, and easy to verify with `.Length` checks without ever exposing the actual values.
-- **VS Code over AWS CloudShell for writing and running Terraform.** CloudShell is convenient for quick one-off AWS CLI commands, but it's an ephemeral session — no persistent Terraform extension, no real file explorer for a multi-module project, and no local git integration. Working in VS Code meant proper syntax highlighting and autocomplete for `.tf` files, a terminal scoped exactly to my project folder, and the ability to commit and push straight to GitHub without leaving the editor.
+- **VS Code over AWS CloudShell for writing and running Terraform.**CloudShell is convenient for quick one-off AWS CLI commands, but it's a disposable session — no persistent Terraform extension, no real file explorer for a multi-module project, and no local git integration. Every time the session resets, you're starting from scratch, which makes debugging a multi-step terraform plan/apply cycle painful. Working in VS Code meant proper syntax highlighting and autocomplete for .tf files, a terminal scoped exactly to my project folder, and the ability to commit and push straight to GitHub without leaving the editor. For a cloud professional working iteratively — fixing one error, re-running, fixing the next — that persistence makes VS Code the far more convenient choice day to day.
 - **`terraform plan` surfaced real issues before they became expensive mistakes.** Running `plan` caught several problems before anything was created: a credentials signature mismatch from a stray space in a pasted secret key, missing IAM permissions on the deployer user (`ec2:DescribeImages`, `ec2:DescribeAvailabilityZones`), and naming collisions with leftover resources (a target group and DB subnet group) from the manual Part A build. Reading the plan output carefully — rather than skipping straight to `apply` — turned each of these into a two-minute fix instead of a failed deployment.
 
 
