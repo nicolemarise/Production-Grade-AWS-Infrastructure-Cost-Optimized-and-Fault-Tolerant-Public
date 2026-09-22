@@ -66,10 +66,14 @@ The project is divided into two parts:
 - **VS Code over AWS CloudShell for writing and running Terraform.** CloudShell is convenient for quick one-off AWS CLI commands, but it's an ephemeral session — no persistent Terraform extension, no real file explorer for a multi-module project, and no local git integration. Working in VS Code meant proper syntax highlighting and autocomplete for `.tf` files, a terminal scoped exactly to my project folder, and the ability to commit and push straight to GitHub without leaving the editor.
 - **`terraform plan` surfaced real issues before they became expensive mistakes.** Running `plan` caught several problems before anything was created: a credentials signature mismatch from a stray space in a pasted secret key, missing IAM permissions on the deployer user (`ec2:DescribeImages`, `ec2:DescribeAvailabilityZones`), and naming collisions with leftover resources (a target group and DB subnet group) from the manual Part A build. Reading the plan output carefully — rather than skipping straight to `apply` — turned each of these into a two-minute fix instead of a failed deployment.
 
-## Repository structure
 
+VPC creation success
 <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/6cec1a13-bf4e-47e0-9e6a-f2c5d4c1340a" />
+
+VPC resource map
 <img width="1919" height="990" alt="image" src="https://github.com/user-attachments/assets/b131bc29-6e6f-4d74-9dc4-3070b4a1807c" />
+
+ALB creation success
 <img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/aa67438a-26b1-423c-acda-f8973661c9c7" />
 <img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/61eba25d-0895-4efe-88c1-28552730c7c8" />
 <img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/662f5abb-1dd4-4331-9e57-067973c5f259" />
