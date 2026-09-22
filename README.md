@@ -1,4 +1,4 @@
-<img width="1363" height="726" alt="image" src="https://github.com/user-attachments/assets/30e70016-e986-4abb-bf0f-99b4970b0b17" /># Production-Grade AWS Infrastructure — Cost-Optimized and Fault-Tolerant
+# Production-Grade AWS Infrastructure — Cost-Optimized and Fault-Tolerant
 
 🔗 **Live Demo (Before – static site):** [Flowdesk](https://nicolemarise.github.io/Production-Grade-AWS-Infrastructure-Cost-Optimized-and-Fault-Tolerant-Public/FLowDesk/)
 
