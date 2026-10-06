@@ -1,0 +1,15 @@
+# Copy this file to terraform.tfvars and fill in your own values.
+# terraform.tfvars is gitignored - never commit real secrets.
+
+aws_region     = "us-east-1"
+project_name   = "flowdesk"
+key_name       = "flowdesk-key"
+
+# Must be globally unique across all of AWS
+s3_bucket_name = "flowdesk-static-yourname"
+
+# Path (relative to this folder) to Flowdesk's index.html, styles.css, script.js
+flowdesk_static_files_path = "../FLowDesk"
+
+db_username = "admin"
+db_password = "change-me-to-a-strong-password"
