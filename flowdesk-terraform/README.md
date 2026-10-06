@@ -26,7 +26,7 @@ files, and CloudWatch monitoring.
 
 - An AWS account with credentials configured locally (`aws configure`, or
   environment variables) - confirm with `aws sts get-caller-identity`.
-- [flowdesk-terraform/](https://developer.hashicorp.com/terraform/install) >= 1.5 installed
+- [Terraform/](https://developer.hashicorp.com/terraform/install) >= 1.5 installed
   and on your PATH - confirm with `terraform -version`.
 - An existing EC2 key pair in your AWS account (matching `var.key_name`).
 - Flowdesk's static files (`index.html`, `styles.css`, `script.js`) available
