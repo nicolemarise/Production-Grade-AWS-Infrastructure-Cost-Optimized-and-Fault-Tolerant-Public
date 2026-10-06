@@ -2,7 +2,7 @@
 
 🔗 **Live Demo (Before – static site):** [Flowdesk](https://nicolemarise.github.io/Production-Grade-AWS-Infrastructure-Cost-Optimized-and-Fault-Tolerant-Public/FLowDesk/)
 
-🔗 **Live Demo (After – AWS infra):** Deployed on-demand via Terraform to control cost — see full evidence below. Run `terraform apply` in the `terraform/` folder to bring it up live in 15 minutes.
+🔗 **Live Demo (After – AWS infra):** Deployed on-demand via Terraform to control cost — see full evidence below. Run `terraform apply` in the `flowdesk-terraform/` folder to bring it up live in 15 minutes.
 
 ## The Business Challenge
 
