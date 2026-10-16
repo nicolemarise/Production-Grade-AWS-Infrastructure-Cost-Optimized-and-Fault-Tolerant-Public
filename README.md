@@ -10,9 +10,7 @@ The business required a **highly available and highly scalable application** cap
 
 ## Solution
 
-I designed a **highly available AWS infrastructure** targeting **10K requests per hour**, **99.99% uptime**, and a **40% reduction in operating costs** through Auto Scaling and a Multi-AZ architecture.
-
-## Execution
+I designed a highly available AWS architecture targeting 10K requests per hour, using Multi-AZ redundancy and Auto Scaling to stay resilient under load while keeping idle cost low.
 
 I implemented a **Multi-AZ VPC** with public and private subnets, an **Application Load Balancer (ALB)** with health checks, **EC2 Auto Scaling based on CPU utilisation**, **Multi-AZ Amazon RDS in private subnets**, **Amazon S3 for static content**, and **Amazon CloudWatch alarms and dashboards** for monitoring and observability.
 
